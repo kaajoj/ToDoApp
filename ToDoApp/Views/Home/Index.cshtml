@@ -3,6 +3,27 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">To-do list</h1>
+    @* <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@
+    <div>
+        <input type="text" placeholder="New task"/> 
+        <button>Add</button>
+        <ul>
+            <li>Task1<button>Delete</button><button>Check</button></li>
+            <li>Task2<button>Delete</button><button>Check</button></li>
+            <li>Task3<button>Delete</button><button>Check</button></li>
+        </ul>
+
+        <button>Edit</button>
+        <button>Delete</button>
+    </div>
 </div>
+
+<script>
+//    (function () {
+//        var button = document.querySelector("#cookieConsent button[data-cookie-string]");
+//        button.addEventListener("click", function (event) {
+//            document.cookie = button.dataset.cookieString;
+//        }, false);
+//    })();
+</script>
