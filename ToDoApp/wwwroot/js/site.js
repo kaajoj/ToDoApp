@@ -1,6 +1,8 @@
 ﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 
 var list = {};
+var list2 = {};
+
 
 function addTask() {
     var task = {};
@@ -8,8 +10,9 @@ function addTask() {
 
     list.tasks.push(task);
     console.info(list);
-//    $("#tasks").empty();
+
     showTasks();
+    $("#newTask").val("");
 }
 
 function showTasks() {
@@ -31,12 +34,29 @@ function deleteTask(id) {
 }
 
 function checkTask(id) {
-    $("#item_" + id).addClass("checked");
+    if ($("#item_" + id).hasClass("checked")) {
+        $("#item_" + id).removeClass("checked");
+    } else {
+        $("#item_" + id).addClass("checked");
+    }
 }
 
 $(document).ready(function() {
-    console.info("1ready");
+    console.info("ready");
     list.tasks = new Array();
-//    console.log("2ready");
+    $("#newTask").focus();
+    $("#newTask").keyup(function(event) {
+        if (event.keyCode == 13) {
+            addTask();
+        }
+    });
+
+    list2.tasks = new Array();
+    list2.tasks = [
+        { name: "test1" },
+        { name: "test2" },
+        { name: "test3" },
+    ]; 
+    console.log(list2);
 //    console.error("3ready");
 });

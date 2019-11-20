@@ -23,17 +23,20 @@
 
 ul {
     list-style-type: none;
-    max-width: 300px;
-    margin: 20px auto;
+    max-width: 500px;
+    margin: auto;
 }
 
 li {
-    /* min-height: 20px; */
+    min-height: 42px;
     text-align: left;
-    /* background-color: white; */
+    background-color: white;
     padding: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     font-size: 18px;
+    color: black;
+    margin: 20px;
+    border-radius: 6px;
 }
 
 li button {
@@ -43,4 +46,8 @@ li button {
 
 .checked {
     text-decoration: line-through;
+}
+
+#newTask {
+    border-radius: 2px;
 }
