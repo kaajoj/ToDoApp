@@ -40,3 +40,7 @@ li button {
     float: right;
     margin: 0 3px;
 }
+
+.checked {
+    text-decoration: line-through;
+}
